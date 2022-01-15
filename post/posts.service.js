@@ -20,8 +20,8 @@ export const create = async (partialPosts) => {
   return await Posts.create(partialPosts);
 }
 //Updatera
-export const update = async (id) => {
-  return await Posts.findOneAndUpdate(id);
+export const update = async (id, body) => {
+  return await Posts.findOneAndUpdate(id, body);
 }
 
 //Tidigare:

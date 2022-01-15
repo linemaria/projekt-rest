@@ -58,7 +58,9 @@ postsRouter.delete('/:id', async (req, res) => {
 
     await remove(id);
 
-    res.status(204).end();
+    res.status(200).send({
+      message: 'Deleted!'
+    });
   } catch (error) {
     res.status(500).send({
       message: 'Sever error'
@@ -95,18 +97,19 @@ postsRouter.post('/', async (req, res) => {
 
 });
 
-  // PUT
+  //PUT
   postsRouter.put('/:id', async (req, res) =>  {
     try {
-      const { id } = req.params;
-       const{ location, runs, rating } = req.body;
-        await update(id, location, runs, rating);
+      const id = req.params;
+       const body = req.body;
+        await update(id, body);
       res.json({message: "Post updated"}); }
-    // } 
+
     catch {
         res.json({message: "Couldn't find post"});
     }
   });
+
 
   //make res.status
   
