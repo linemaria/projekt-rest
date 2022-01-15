@@ -1,3 +1,3 @@
-# projekt-rest-test
+# projekt-rest
 - npm install
 - node index.js
