@@ -2,10 +2,10 @@
   "name": "3.3-api",
   "version": "1.0.0",
   "description": "moment3",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node app.js"
   },
   "author": "Line Asp",
   "license": "ISC",
