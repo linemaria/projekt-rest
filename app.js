@@ -17,6 +17,8 @@ import {
 // Deklarerar uri från information i .env
 const uri = `${process.env.MONGO_URI}`;
 
+const port = process.env.PORT;
+
 (async () => {
   try {
     // Skapar uppkoppling
